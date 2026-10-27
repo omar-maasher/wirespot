@@ -278,7 +278,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
 }
 
 class _DashboardNavigation extends ConsumerWidget {
-  const _DashboardNavigation({super.key, this.rail = false});
+  const _DashboardNavigation({this.rail = false});
 
   final bool rail;
 
@@ -301,8 +301,18 @@ class _DashboardNavigation extends ConsumerWidget {
         Icons.wifi_tethering_outlined,
         Icons.wifi_tethering,
       ),
-      (text.reports, AppRoutes.reports, Icons.bar_chart_outlined, Icons.bar_chart),
-      (text.settings, AppRoutes.settings, Icons.settings_outlined, Icons.settings),
+      (
+        text.reports,
+        AppRoutes.reports,
+        Icons.bar_chart_outlined,
+        Icons.bar_chart,
+      ),
+      (
+        text.settings,
+        AppRoutes.settings,
+        Icons.settings_outlined,
+        Icons.settings,
+      ),
     ];
 
     final selected = items.indexWhere(

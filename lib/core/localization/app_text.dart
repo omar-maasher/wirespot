@@ -3,12 +3,8 @@ class AppText {
 
   final String languageCode;
 
-  String get settings => _pick(
-    en: 'Settings',
-    fr: 'Parametres',
-    ha: 'Saituna',
-    ar: 'الإعدادات',
-  );
+  String get settings =>
+      _pick(en: 'Settings', fr: 'Parametres', ha: 'Saituna', ar: 'الإعدادات');
 
   String get dashboard => _pick(
     en: 'Dashboard',
@@ -17,40 +13,20 @@ class AppText {
     ar: 'لوحة التحكم',
   );
 
-  String get routers => _pick(
-    en: 'Routers',
-    fr: 'Routeurs',
-    ha: 'Rautoci',
-    ar: 'أجهزة التوجيه',
-  );
+  String get routers =>
+      _pick(en: 'Routers', fr: 'Routeurs', ha: 'Rautoci', ar: 'أجهزة التوجيه');
 
-  String get hotspot => _pick(
-    en: 'Hotspot',
-    fr: 'Hotspot',
-    ha: 'Hotspot',
-    ar: 'نقطة الاتصال',
-  );
+  String get hotspot =>
+      _pick(en: 'Hotspot', fr: 'Hotspot', ha: 'Hotspot', ar: 'نقطة الاتصال');
 
-  String get vouchers => _pick(
-    en: 'Vouchers',
-    fr: 'Coupons',
-    ha: 'Tikiti',
-    ar: 'القسائم',
-  );
+  String get vouchers =>
+      _pick(en: 'Vouchers', fr: 'Coupons', ha: 'Tikiti', ar: 'القسائم');
 
-  String get reports => _pick(
-    en: 'Reports',
-    fr: 'Rapports',
-    ha: 'Rahotanni',
-    ar: 'التقارير',
-  );
+  String get reports =>
+      _pick(en: 'Reports', fr: 'Rapports', ha: 'Rahotanni', ar: 'التقارير');
 
-  String get refresh => _pick(
-    en: 'Refresh',
-    fr: 'Actualiser',
-    ha: 'Sabunta',
-    ar: 'تحديث',
-  );
+  String get refresh =>
+      _pick(en: 'Refresh', fr: 'Actualiser', ha: 'Sabunta', ar: 'تحديث');
 
   String get retry => _pick(
     en: 'Retry',
@@ -66,54 +42,25 @@ class AppText {
     ar: 'إضافة موجه',
   );
 
-  String get edit => _pick(
-    en: 'Edit',
-    fr: 'Modifier',
-    ha: 'Gyara',
-    ar: 'تعديل',
-  );
+  String get edit =>
+      _pick(en: 'Edit', fr: 'Modifier', ha: 'Gyara', ar: 'تعديل');
 
-  String get delete => _pick(
-    en: 'Delete',
-    fr: 'Supprimer',
-    ha: 'Goge',
-    ar: 'حذف',
-  );
+  String get delete =>
+      _pick(en: 'Delete', fr: 'Supprimer', ha: 'Goge', ar: 'حذف');
 
-  String get cancel => _pick(
-    en: 'Cancel',
-    fr: 'Annuler',
-    ha: 'Soke',
-    ar: 'إلغاء',
-  );
+  String get cancel =>
+      _pick(en: 'Cancel', fr: 'Annuler', ha: 'Soke', ar: 'إلغاء');
 
-  String get save => _pick(
-    en: 'Save',
-    fr: 'Enregistrer',
-    ha: 'Ajiye',
-    ar: 'حفظ',
-  );
+  String get save =>
+      _pick(en: 'Save', fr: 'Enregistrer', ha: 'Ajiye', ar: 'حفظ');
 
-  String get create => _pick(
-    en: 'Create',
-    fr: 'Creer',
-    ha: 'Kirkira',
-    ar: 'إنشاء',
-  );
+  String get create =>
+      _pick(en: 'Create', fr: 'Creer', ha: 'Kirkira', ar: 'إنشاء');
 
-  String get apply => _pick(
-    en: 'Apply',
-    fr: 'Appliquer',
-    ha: 'Aiwatar',
-    ar: 'تطبيق',
-  );
+  String get apply =>
+      _pick(en: 'Apply', fr: 'Appliquer', ha: 'Aiwatar', ar: 'تطبيق');
 
-  String get close => _pick(
-    en: 'Close',
-    fr: 'Fermer',
-    ha: 'Rufe',
-    ar: 'إغلاق',
-  );
+  String get close => _pick(en: 'Close', fr: 'Fermer', ha: 'Rufe', ar: 'إغلاق');
 
   String get onlineUsers => _pick(
     en: 'Online users',
@@ -129,12 +76,8 @@ class AppText {
     ar: 'مبيعات اليوم',
   );
 
-  String get memory => _pick(
-    en: 'Memory',
-    fr: 'Memoire',
-    ha: 'Memory',
-    ar: 'الذاكرة',
-  );
+  String get memory =>
+      _pick(en: 'Memory', fr: 'Memoire', ha: 'Memory', ar: 'الذاكرة');
 
   String get routerHealth => _pick(
     en: 'Router Health',
@@ -150,19 +93,11 @@ class AppText {
     ar: 'الواجهات',
   );
 
-  String get support => _pick(
-    en: 'Support',
-    fr: 'Support',
-    ha: 'Taimako',
-    ar: 'الدعم الفني',
-  );
+  String get support =>
+      _pick(en: 'Support', fr: 'Support', ha: 'Taimako', ar: 'الدعم الفني');
 
-  String get online => _pick(
-    en: 'Online',
-    fr: 'En ligne',
-    ha: 'Online',
-    ar: 'متصل',
-  );
+  String get online =>
+      _pick(en: 'Online', fr: 'En ligne', ha: 'Online', ar: 'متصل');
 
   String get apiOffline => _pick(
     en: 'API offline',
@@ -171,19 +106,10 @@ class AppText {
     ar: 'واجهة API غير متصلة',
   );
 
-  String get version => _pick(
-    en: 'Version',
-    fr: 'Version',
-    ha: 'Siga',
-    ar: 'الإصدار',
-  );
+  String get version =>
+      _pick(en: 'Version', fr: 'Version', ha: 'Siga', ar: 'الإصدار');
 
-  String get board => _pick(
-    en: 'Board',
-    fr: 'Carte',
-    ha: 'Allo',
-    ar: 'اللوحة',
-  );
+  String get board => _pick(en: 'Board', fr: 'Carte', ha: 'Allo', ar: 'اللوحة');
 
   String get uptime => _pick(
     en: 'Uptime',
@@ -206,19 +132,11 @@ class AppText {
     ar: 'درجة الحرارة',
   );
 
-  String get running => _pick(
-    en: 'Running',
-    fr: 'Actif',
-    ha: 'Yana aiki',
-    ar: 'قيد التشغيل',
-  );
+  String get running =>
+      _pick(en: 'Running', fr: 'Actif', ha: 'Yana aiki', ar: 'قيد التشغيل');
 
-  String get down => _pick(
-    en: 'Down',
-    fr: 'Arrete',
-    ha: 'Ya tsaya',
-    ar: 'متوقف',
-  );
+  String get down =>
+      _pick(en: 'Down', fr: 'Arrete', ha: 'Ya tsaya', ar: 'متوقف');
 
   String get noInterfaces => _pick(
     en: 'No interfaces reported.',
@@ -353,12 +271,8 @@ class AppText {
     ar: 'لوحة التحكم غير متوفرة',
   );
 
-  String get security => _pick(
-    en: 'Security',
-    fr: 'Securite',
-    ha: 'Tsaro',
-    ar: 'الأمان',
-  );
+  String get security =>
+      _pick(en: 'Security', fr: 'Securite', ha: 'Tsaro', ar: 'الأمان');
 
   String get preferences => _pick(
     en: 'Preferences',
@@ -367,19 +281,11 @@ class AppText {
     ar: 'التفضيلات',
   );
 
-  String get theme => _pick(
-    en: 'Theme',
-    fr: 'Theme',
-    ha: 'Launi',
-    ar: 'المظهر',
-  );
+  String get theme =>
+      _pick(en: 'Theme', fr: 'Theme', ha: 'Launi', ar: 'المظهر');
 
-  String get language => _pick(
-    en: 'Language',
-    fr: 'Langue',
-    ha: 'Harshe',
-    ar: 'اللغة',
-  );
+  String get language =>
+      _pick(en: 'Language', fr: 'Langue', ha: 'Harshe', ar: 'اللغة');
 
   String get defaultCurrency => _pick(
     en: 'Default currency',
@@ -508,12 +414,8 @@ class AppText {
     ar: 'آخر تشغيل',
   );
 
-  String get premium => _pick(
-    en: 'Premium',
-    fr: 'Premium',
-    ha: 'Premium',
-    ar: 'بريميوم',
-  );
+  String get premium =>
+      _pick(en: 'Premium', fr: 'Premium', ha: 'Premium', ar: 'بريميوم');
 
   String get runDueTasksNow => _pick(
     en: 'Run due tasks now',
@@ -564,19 +466,10 @@ class AppText {
     ar: 'إنشاء قسائم',
   );
 
-  String get router => _pick(
-    en: 'Router',
-    fr: 'Routeur',
-    ha: 'Rauta',
-    ar: 'الموجه',
-  );
+  String get router =>
+      _pick(en: 'Router', fr: 'Routeur', ha: 'Rauta', ar: 'الموجه');
 
-  String get plan => _pick(
-    en: 'Plan',
-    fr: 'Forfait',
-    ha: 'Tsari',
-    ar: 'الخطة',
-  );
+  String get plan => _pick(en: 'Plan', fr: 'Forfait', ha: 'Tsari', ar: 'الخطة');
 
   String get userCodeMode => _pick(
     en: 'User code mode',
@@ -606,12 +499,8 @@ class AppText {
     ar: 'اسم المستخدم كرمز PIN فقط',
   );
 
-  String get quantity => _pick(
-    en: 'Quantity',
-    fr: 'Quantite',
-    ha: 'Yawa',
-    ar: 'الكمية',
-  );
+  String get quantity =>
+      _pick(en: 'Quantity', fr: 'Quantite', ha: 'Yawa', ar: 'الكمية');
 
   String get userPrefix => _pick(
     en: 'User prefix',
@@ -641,12 +530,8 @@ class AppText {
     ar: 'طول كلمة المرور',
   );
 
-  String get price => _pick(
-    en: 'Price',
-    fr: 'Prix',
-    ha: 'Farashi',
-    ar: 'السعر',
-  );
+  String get price =>
+      _pick(en: 'Price', fr: 'Prix', ha: 'Farashi', ar: 'السعر');
 
   String get dataLimit => _pick(
     en: 'Data limit',
@@ -690,12 +575,8 @@ class AppText {
     ar: 'جارٍ الإنشاء...',
   );
 
-  String get generate => _pick(
-    en: 'Generate',
-    fr: 'Creer',
-    ha: 'Kirkira',
-    ar: 'إنشاء',
-  );
+  String get generate =>
+      _pick(en: 'Generate', fr: 'Creer', ha: 'Kirkira', ar: 'إنشاء');
 
   String vouchersGenerated(int count) => _pick(
     en: '$count voucher(s) generated.',
@@ -725,12 +606,8 @@ class AppText {
     ar: 'ستظهر القسائم المنشأة هنا.',
   );
 
-  String get history => _pick(
-    en: 'History',
-    fr: 'Historique',
-    ha: 'Tarihi',
-    ar: 'السجل',
-  );
+  String get history =>
+      _pick(en: 'History', fr: 'Historique', ha: 'Tarihi', ar: 'السجل');
 
   String get couldNotLoadVouchers => _pick(
     en: 'Could not load vouchers',
