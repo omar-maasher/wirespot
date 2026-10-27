@@ -277,37 +277,40 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
   }
 }
 
-class _DashboardNavigation extends StatelessWidget {
-  const _DashboardNavigation({this.rail = false});
+class _DashboardNavigation extends ConsumerWidget {
+  const _DashboardNavigation({super.key, this.rail = false});
 
   final bool rail;
 
-  static const _items = <(String, String, IconData, IconData)>[
-    (
-      'Dashboard',
-      AppRoutes.dashboard,
-      Icons.dashboard_outlined,
-      Icons.dashboard,
-    ),
-    ('Routers', AppRoutes.routers, Icons.router_outlined, Icons.router),
-    (
-      'Hotspot',
-      AppRoutes.hotspot,
-      Icons.wifi_tethering_outlined,
-      Icons.wifi_tethering,
-    ),
-    ('Reports', AppRoutes.reports, Icons.bar_chart_outlined, Icons.bar_chart),
-    ('Settings', AppRoutes.settings, Icons.settings_outlined, Icons.settings),
-  ];
-
   @override
-  Widget build(BuildContext context) {
-    final selected = _items.indexWhere(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final languageCode =
+        ref.watch(appSettingsProvider).asData?.value.languageCode ?? 'en';
+    final text = AppText(languageCode);
+    final items = <(String, String, IconData, IconData)>[
+      (
+        text.dashboard,
+        AppRoutes.dashboard,
+        Icons.dashboard_outlined,
+        Icons.dashboard,
+      ),
+      (text.routers, AppRoutes.routers, Icons.router_outlined, Icons.router),
+      (
+        text.hotspot,
+        AppRoutes.hotspot,
+        Icons.wifi_tethering_outlined,
+        Icons.wifi_tethering,
+      ),
+      (text.reports, AppRoutes.reports, Icons.bar_chart_outlined, Icons.bar_chart),
+      (text.settings, AppRoutes.settings, Icons.settings_outlined, Icons.settings),
+    ];
+
+    final selected = items.indexWhere(
       (item) => item.$2 == GoRouterState.of(context).matchedLocation,
     );
     final index = selected < 0 ? 0 : selected;
     void navigate(int value) {
-      if (value != index) context.push(_items[value].$2);
+      if (value != index) context.push(items[value].$2);
     }
 
     if (rail) {
@@ -316,7 +319,7 @@ class _DashboardNavigation extends StatelessWidget {
         onDestinationSelected: navigate,
         labelType: NavigationRailLabelType.all,
         destinations: [
-          for (final item in _items)
+          for (final item in items)
             NavigationRailDestination(
               icon: Icon(item.$3),
               selectedIcon: Icon(item.$4),
@@ -329,7 +332,7 @@ class _DashboardNavigation extends StatelessWidget {
       selectedIndex: index,
       onDestinationSelected: navigate,
       destinations: [
-        for (final item in _items)
+        for (final item in items)
           NavigationDestination(
             icon: Icon(item.$3),
             selectedIcon: Icon(item.$4),

@@ -86,7 +86,7 @@ class _WireSpotAppState extends ConsumerState<WireSpotApp>
       // dialogs, date pickers, etc.) without localizations and can make the
       // Settings screen fail after switching languages. The Material chrome
       // falls back to English while the app content remains Hausa.
-      supportedLocales: const [Locale('en'), Locale('fr')],
+      supportedLocales: const [Locale('en'), Locale('fr'), Locale('ar')],
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -123,6 +123,7 @@ class _WireSpotAppState extends ConsumerState<WireSpotApp>
   Locale _materialLocale(String? languageCode) {
     return switch (languageCode) {
       'fr' => const Locale('fr'),
+      'ar' => const Locale('ar'),
       // Hausa is intentionally handled by AppText, not MaterialLocalizations.
       'ha' => const Locale('en'),
       _ => const Locale('en'),

@@ -28,4 +28,12 @@ void main() {
     expect(next.businessEmail, AppBranding.supportEmail);
     expect(next.businessLogoPath, isEmpty);
   });
+
+  test('includes Arabic in supported languages', () {
+    final arabic = AppSettingsOptions.languages.firstWhere(
+      (lang) => lang.code == 'ar',
+    );
+    expect(arabic.name, 'Arabic');
+    expect(arabic.nativeName, 'العربية');
+  });
 }

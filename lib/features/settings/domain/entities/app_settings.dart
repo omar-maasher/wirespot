@@ -66,6 +66,7 @@ class AppSettingsOptions {
     SupportedLanguage(code: 'en', name: 'English', nativeName: 'English'),
     SupportedLanguage(code: 'fr', name: 'French', nativeName: 'Francais'),
     SupportedLanguage(code: 'ha', name: 'Hausa', nativeName: 'Hausa'),
+    SupportedLanguage(code: 'ar', name: 'Arabic', nativeName: 'العربية'),
   ];
 
   static const currencies = [

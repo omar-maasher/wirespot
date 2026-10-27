@@ -33,3 +33,8 @@ android/app/release
 *.iml
 .idea/
 .vscode/
+
+# Analyzer / diagnostic logs
+*_output.txt
+clean_issues.txt
+machine*.txt

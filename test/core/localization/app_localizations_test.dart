@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wirespot/core/currency/currency_formatter.dart';
 import 'package:wirespot/core/localization/app_localizations.dart';
+import 'package:wirespot/core/localization/app_text.dart';
 
 void main() {
   group('AppLocalizations', () {
@@ -32,7 +33,15 @@ void main() {
       expect(loc.translate('total_revenue'), 'Total Money Wey Enter');
     });
 
+    test('translates key terms to Arabic', () {
+      final loc = AppLocalizations(AppLanguage.arabic);
+      expect(loc.translate('dashboard'), 'لوحة التحكم');
+      expect(loc.translate('vouchers'), 'قسائم الاتصال');
+      expect(loc.translate('total_revenue'), 'إجمالي الإيرادات');
+    });
+
     test('parses language codes accurately', () {
+      expect(AppLanguage.fromCode('ar'), AppLanguage.arabic);
       expect(AppLanguage.fromCode('yo'), AppLanguage.yoruba);
       expect(AppLanguage.fromCode('ig'), AppLanguage.igbo);
       expect(AppLanguage.fromCode('pcm'), AppLanguage.pidgin);
@@ -59,6 +68,18 @@ void main() {
     test('formats USD Dollar correctly', () {
       final result = CurrencyFormatter.format(1000, currencyCode: 'USD');
       expect(result, '\$10.00');
+    });
+  });
+
+  group('AppText', () {
+    test('provides Arabic translations', () {
+      final text = AppText('ar');
+      expect(text.dashboard, 'لوحة التحكم');
+      expect(text.settings, 'الإعدادات');
+      expect(text.routers, 'أجهزة التوجيه');
+      expect(text.vouchers, 'القسائم');
+      expect(text.reports, 'التقارير');
+      expect(text.language, 'اللغة');
     });
   });
 }
