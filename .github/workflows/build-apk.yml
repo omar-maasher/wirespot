@@ -1,4 +1,4 @@
-  name: Build WireSpot APK
+name: Build WireSpot APK
 
 on:
   workflow_dispatch:
@@ -8,10 +8,11 @@ permissions:
 
 jobs:
   build:
+    name: Build Android
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Java
@@ -28,12 +29,12 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Build Android APK
+      - name: Build APK
         run: flutter build apk --debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: wirespot-debug-apk
+          name: wirespot-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
           retention-days: 7
